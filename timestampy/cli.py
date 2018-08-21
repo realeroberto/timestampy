@@ -4,13 +4,30 @@
 import sys
 import click
 
+import inotify.adapters
+from inotify.constants import *
+from subprocess import call
+import os
 
 @click.command()
 def main(args=None):
-    """Console script for timestampy."""
-    click.echo("Replace this message by putting your code into "
-               "timestampy.cli.main")
-    click.echo("See click documentation at http://click.pocoo.org/")
+    i = inotify.adapters.Inotify()
+
+    i.add_watch('/tmp', mask = IN_CREATE | IN_MODIFY | IN_MOVED_TO)
+
+    for event in i.event_gen(yield_nones=False):
+        (_, type_names, path, filename) = event
+
+        print("PATH=[{}] FILENAME=[{}] EVENT_TYPES={}".format(
+              path, filename, type_names))
+
+        (_, file_extension) = os.path.splitext(filename)
+        if not file_extension == ".ots":
+            ots_file = os.path.join(path, filename + ".ots")
+            if os.path.exists(ots_file):
+                os.remove(ots_file)
+            # create timestamp
+            call(["ots", "stamp", os.path.join(path, filename)])
     return 0
 
 
