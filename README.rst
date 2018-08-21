@@ -1,41 +1,38 @@
-==========
-TimestamPy
-==========
-
+============================================================
+TimestamPy: Automatic timestamp generation on the blockchain
+============================================================
 
 .. image:: https://img.shields.io/pypi/v/timestampy.svg
-        :target: https://pypi.python.org/pypi/timestampy
+           :target: https://pypi.python.org/pypi/timestampy
 
 .. image:: https://img.shields.io/travis/robertoreale/timestampy.svg
-        :target: https://travis-ci.org/robertoreale/timestampy
+           :target: https://travis-ci.org/robertoreale/timestampy
 
 .. image:: https://readthedocs.org/projects/timestampy/badge/?version=latest
-        :target: https://timestampy.readthedocs.io/en/latest/?badge=latest
+           :target: https://timestampy.readthedocs.io/en/latest/?badge=latest
         :alt: Documentation Status
 
 
 .. image:: https://pyup.io/repos/github/robertoreale/timestampy/shield.svg
-     :target: https://pyup.io/repos/github/robertoreale/timestampy/
+        :target: https://pyup.io/repos/github/robertoreale/timestampy/
      :alt: Updates
 
 
 
-Automatic timestamp generation on the blockchain.
+Usage
+-----
 
+TimestamPy is based on the `OpenTimestamps`_ project and on the ``inotify`` Linux kernel facility.
 
-* Free software: MIT license
-* Documentation: https://timestampy.readthedocs.io.
+Install the relevant prerequisites as follows::
 
+    $ pip3 install inotify
+    $ pip3 install opentimestamps-client
 
-Features
---------
+Then run
 
-* TODO
+    $ timestampy
 
-Credits
--------
+By default, TimestamPy will watch the ``/tmp`` folder; each time a file is created and/or moved into it, a timestamp will be created on the Bitcoin blockchain.
 
-This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
-
-.. _Cookiecutter: https://github.com/audreyr/cookiecutter
-.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+.. _OpenTimestamps: https://opentimestamps.org/
