@@ -2,6 +2,11 @@
 History
 =======
 
+0.1.2 (2018-09-02)
+------------------
+
+* Change default timestamp folder (and add option).
+
 0.1.1 (2018-08-21)
 ------------------
 
