@@ -11,7 +11,7 @@ deploy:
   distributions: sdist bdist_wheel
   user: reale
   password:
-    secure:
+    secure: PVgIJbBlJy4EvKlHx3y/Om+6Lsjxb28lF4lVs8w/TpvtXwaPAfvnxG+D/MwTaGOjIJUyRW7uAei9hSeFeFMhIU5Fzxpy07CRCJK7IIcvHs3b5R1Iu2C5NyPy1UEpY5ripwQvhf/cgo2T1BbrxsyGamqeSExNnQ8MIW+uQBWa075+v5KqgpzMhq3koDGAt5Wyhq8lV7QyOmxk0nUdOtxyTxK+HL2GYMtCnHSoeX1agwjf76MPM0HksotkITmkBnPogPeBGZ2tXCHjoG/lE4NOoiZOJqxtHrqcVKVcybCttBSjxNfll5jI/dzWbynelrFBc8Po+0c8jHDDTzgciAWjLcWbwCCUhwVtdVnoRn8RXWPtKKBkP9pIVIsbCqkCIr3kbj0LzGHueK1335JKliWRIDUAkZ/QW0Fsf0uXXCWfVCFDMdgighRbW/c+tKAw8B+xDAgtFfAQa/08Xgox/IhVahYigq9MM/ADuw3zaS5/2cWcPmyxP6Z1WqSdTR2ufgiBJZ3XiVa60fQ/bULHUlYfvp/PnCfh7UvqQNuJHii82Qi3jsaBjrZfKyHZd//xFNq2HF1YguOWfas/UFMJ4rnrNV+si7qajiPpHWWB6sEGzj6PUqylS2AtXwkfdlFyDSsMmG+YE5qjLQKVTCg65KgP8VW+cWFPPTW1Zs3nxfH2pkk=
   on:
     tags: true
     repo: reale/timestampy
