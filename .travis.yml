@@ -9,10 +9,10 @@ script: tox
 deploy:
   provider: pypi
   distributions: sdist bdist_wheel
-  user: robertoreale
+  user: reale
   password:
-    secure: YCvl+fTDtEPD3hnBJ2AR7tJ53Uj3tq6qmOgrOk0of040S9lKi6H+RS16hSJ5QCZ1SEqOrzL9H00IE8Tdf0y7FX53qCT8wxCy8IH47LxWqwvKPTikoglGnsBDW2qtH3Q5guY+JGBSPPNHQVYC0oe5C2/l/nzDMtMaUAtmcM0nZquY4bZlPVVrfq2UmQUqlxIgc3IJS8VO1ICQfnflJuBIHkB1/kB49HeYUU1q86GNxR7Qn1Mke67/I3NpJKEI8iv+LSQ4qd4LUtCEZ7LPE40T0LyKsquqAKgax4Dr2pLNrfcb9ILjKPdSRZtN63vQG01yr8ogAoAtRVTR2HEsg9h0rgL/mEwQmYhIaaT3GY0GlOZ6SlzUYoyHPCGhOQBkZ1qfBxKQ+jKTx/L8IprGEZ3IhO31DQKmeSTy5W0HMqjDXYadXeCuUFCFf3Ydt9hzOuXwHTUBdQn57AkGIYbzYHgCuiR8t9qt4maJcolGPy1ZC7cOZDmLumqKk3V0c0HSYdL9CPQ353oOxeqZAGu33vYYH/RDa/IcR9M19LVvkjP1izxzIdutY6vmxy5fG1CqymjbQh5B0DWcSaDqg+uUxhF4NXmp2/Og2Xl91Hj2l8AAj1vqSr9/7P/PD2iW5OukagWFg7gTdUsrsoRRQs7wO6WTN+2TqkvILmtbPtvK7uzeZoY=
+    secure:
   on:
     tags: true
-    repo: robertoreale/timestampy
+    repo: reale/timestampy
     python: 3.6
