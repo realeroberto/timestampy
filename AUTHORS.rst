@@ -5,7 +5,7 @@ Credits
 Development Lead
 ----------------
 
-* Roberto Reale <rober.reale@gmail.com>
+* Roberto Reale <roberto@reale.me>
 
 Contributors
 ------------
