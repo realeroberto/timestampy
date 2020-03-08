@@ -8,12 +8,20 @@ import inotify.adapters
 from inotify.constants import IN_CREATE, IN_MODIFY, IN_MOVED_TO
 from subprocess import call
 import os
+import errno
 
 
 @click.command()
 @click.option('--f', default='~/timestampy')
 def main(f):
     f = os.path.expanduser(f)
+
+    # create f if it does not exist
+    try:
+        os.makedirs(f)
+    except OSError as e:
+        if e.errno != errno.EEXIST:
+            raise
 
     i = inotify.adapters.Inotify()
     i.add_watch(f, mask=IN_CREATE | IN_MODIFY | IN_MOVED_TO)
