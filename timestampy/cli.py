@@ -5,9 +5,10 @@ import sys
 import click
 
 import inotify.adapters
-from inotify.constants import *
+from inotify.constants import IN_CREATE, IN_MODIFY, IN_MOVED_TO
 from subprocess import call
 import os
+
 
 @click.command()
 @click.option('--f', default='~/timestampy')
@@ -15,7 +16,7 @@ def main(f):
     f = os.path.expanduser(f)
 
     i = inotify.adapters.Inotify()
-    i.add_watch(f, mask = IN_CREATE | IN_MODIFY | IN_MOVED_TO)
+    i.add_watch(f, mask=IN_CREATE | IN_MODIFY | IN_MOVED_TO)
 
     for event in i.event_gen(yield_nones=False):
         (_, type_names, path, filename) = event
@@ -36,4 +37,4 @@ def main(f):
 if __name__ == "__main__":
     sys.exit(main())  # pragma: no cover
 
-#vim: ai ts=4 sts=4 et sw=4 ft=python
+# vim: ai ts=4 sts=4 et sw=4 ft=python
